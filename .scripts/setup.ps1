@@ -5,8 +5,8 @@ Param(
   [String]$AzureSubscriptionId,
   [String]$AzureTenantId,
   [ValidateLength(4, 17)]
-  [String]$ProjectName,
-  [String]$AzureSqlLogin = "SqlAdmin"
+  [String]$ProjectName = "FloorElementManager",
+  [String]$AzureSqlLogin = "bone.r28@hotmail.com"
 )
 
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -39,7 +39,7 @@ if (-not $GitHubRepositoryName) {
 }
 
 if (-not $AzureLocation) {
-  $AzureLocation = "australiaeast"
+  $AzureLocation = "uksouth"
 }
 
 if (-not $AzureSubscriptionId) {
